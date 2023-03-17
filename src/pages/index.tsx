@@ -1,9 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import PostList from "~/components/PostList";
-import SearchBar from "~/components/SearchBar";
-
-import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +11,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center gap-10 p-6">
-        <SearchBar />
         <PostList />
       </main>
     </>

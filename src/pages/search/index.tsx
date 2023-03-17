@@ -8,7 +8,6 @@ const Search: NextPage<Props> = ({ search }) => {
   const posts = api.search.searchQuery.useQuery(search || "");
   return (
     <div>
-      Search page
       {posts?.data?.map((post) => {
         return <div>{post.body}</div>;
       })}
