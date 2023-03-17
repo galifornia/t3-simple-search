@@ -1,9 +1,7 @@
 import { Post, User } from "@prisma/client";
-import Image from "next/image";
 
-type Info = Post & { author: User | null };
 interface Props {
-  posts: Info[];
+  posts: (Post & { author: User | null })[];
 }
 
 const PostList = ({ posts }: Props) => {

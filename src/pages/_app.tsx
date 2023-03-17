@@ -7,7 +7,7 @@ import SearchBar from "~/components/SearchBar";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className="mx-auto flex w-full max-w-xl flex-col gap-8">
+    <div className="mx-auto flex w-full max-w-xl flex-col gap-8 p-4">
       <SearchBar />
       <Component {...pageProps} />
     </div>
