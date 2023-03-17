@@ -28,6 +28,7 @@ export const searchRouter = createTRPCRouter({
         author: true,
       },
     });
+
     return posts;
   }),
 });

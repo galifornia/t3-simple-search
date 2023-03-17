@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center gap-10 p-6">
-        <PostList />
+        <PostList posts={[]} />
       </main>
     </>
   );

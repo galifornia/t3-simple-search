@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import PostList from "~/components/PostList";
 import { api } from "~/utils/api";
 
 interface Props {
@@ -7,11 +8,9 @@ interface Props {
 const Search: NextPage<Props> = ({ search }) => {
   const posts = api.search.searchQuery.useQuery(search || "");
   return (
-    <div>
-      {posts?.data?.map((post) => {
-        return <div>{post.body}</div>;
-      })}
-    </div>
+    <>
+      <PostList posts={posts.data || []} />
+    </>
   );
 };
 

@@ -2,8 +2,9 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 const SearchBar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
+  const { q } = router.query;
+  const [searchQuery, setSearchQuery] = useState(q);
 
   const onSearch = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
