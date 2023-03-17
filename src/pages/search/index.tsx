@@ -5,11 +5,13 @@ interface Props {
   search?: string;
 }
 const Search: NextPage<Props> = ({ search }) => {
-  const result = api.search.searchQuery.useQuery({ text: search || "" });
+  const posts = api.search.searchQuery.useQuery(search || "");
   return (
     <div>
       Search page
-      <p>{result.data}</p>
+      {posts?.data?.map((post) => {
+        return <div>{post.body}</div>;
+      })}
     </div>
   );
 };
